@@ -1,6 +1,6 @@
 import * as dayjs from 'dayjs';
 import 'dayjs/locale/ru';
-import localeData from 'dayjs/plugin/localeData'
+// import localeData from 'dayjs/plugin/localeData'
 import weekdayPlugin from "dayjs/plugin/weekday";
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 import updateLocale from 'dayjs/plugin/updateLocale'
