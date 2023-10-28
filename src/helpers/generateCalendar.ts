@@ -4,20 +4,21 @@ import 'dayjs/locale/ru';
 import weekdayPlugin from "dayjs/plugin/weekday";
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 import updateLocale from 'dayjs/plugin/updateLocale'
-dayjs.extend(isSameOrBefore)
-dayjs.extend(weekdayPlugin)
-dayjs.locale('ru')
 
-dayjs.extend(updateLocale)
-
-// начинаем неделю с понедельника
-dayjs.updateLocale('ru', {
-    weekStart : 1
-})
 
 export function generateCalendar(): dayjs.Dayjs[][] {
     // dayjs.extend(localeData)
     // dayjs().localeData()
+    dayjs.extend(isSameOrBefore)
+    dayjs.extend(weekdayPlugin)
+    dayjs.locale('ru')
+
+    dayjs.extend(updateLocale)
+
+    // начинаем неделю с понедельника
+    dayjs.updateLocale('ru', {
+        weekStart : 1
+    })
 
   const currentDate = dayjs();
   const currentMonth = currentDate.month();
