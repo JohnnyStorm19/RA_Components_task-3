@@ -8,7 +8,6 @@ dayjs.extend(isSameOrBefore)
 dayjs.extend(weekdayPlugin)
 dayjs.locale('ru')
 dayjs.extend(localeData)
-dayjs().localeData()
 dayjs.extend(updateLocale)
 
 // начинаем неделю с понедельника
@@ -17,6 +16,8 @@ dayjs.updateLocale('ru', {
 })
 
 export function generateCalendar(): dayjs.Dayjs[][] {
+  dayjs().localeData()
+  
   const currentDate = dayjs();
   const currentMonth = currentDate.month();
   const currentYear = currentDate.year();
