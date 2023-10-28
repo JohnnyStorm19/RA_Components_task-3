@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs';
+import dayjs from "dayjs";
 import 'dayjs/locale/ru';
 // import localeData from 'dayjs/plugin/localeData'
 import weekdayPlugin from "dayjs/plugin/weekday";
